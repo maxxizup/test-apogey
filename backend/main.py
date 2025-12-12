@@ -9,11 +9,17 @@ app.add_middleware(
     allow_origins= ["http://localhost:3000/"]
 )
 
-film = {
-    "name": "Oblasty_tymy",
-    "length": 300
-}
+employeers = [{
+    "id": 1
+    "name": "Maxim",
+    "email": "example@gmail.com"
+}]
 
 @app.get("/")
-async def get_film():
-    return film
+async def read_employee():
+    return employeers
+
+@app.post("/")
+async def create_employee(employee_data: dict):
+    employeers.append(employee_data)
+    return employeers
