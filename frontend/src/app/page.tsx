@@ -1,17 +1,14 @@
-import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Main } from "@/components/Main";
-import s from "./page.module.css"
-
 
 export const App = () => {
-    return (
-        <div className={s.App}>
-            <Header />
-            <Main />
-            <Footer />
-        </div>
-    )
+  return (
+    <div className="App">
+        <Header />
+
+        <main></main>
+        <footer></footer>
+    </div>
+  )
 }
 
 export default App;
