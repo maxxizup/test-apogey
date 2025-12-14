@@ -16,7 +16,7 @@ export const Header = () => {
                             <Link className={s.link} href="/">Статьи</Link>
                             <Link className={s.link} href="/">Контакты</Link>
                         </div>
-                        <a href="tel:+79161234567" className={s.phoneLink}>+7 (916) 123-45-67</a>
+                        <a href="tel:88002008089" className={s.phoneLink}>8-800-200-8089</a>
                     </div>
                 </div>
             </div>
