@@ -1,7 +1,7 @@
 .header {
     height: 80px;
     width: 100%;
-    background: gainsboro;
+    box-shadow: 4px 4px 8px 0px rgba(34, 60, 80, 0.2);
 }
 
 .container {
