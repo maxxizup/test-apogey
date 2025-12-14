@@ -14,8 +14,7 @@ sys.path.append(str(pathlib.Path(__file__).resolve().parents[2]))
 from src.config import settings
 from src.database import Base
 from src.models.employee import EmployeeOrm
-
-
+from src.models.clients import ClientOrm
 
 
 # this is the Alembic Config object, which provides

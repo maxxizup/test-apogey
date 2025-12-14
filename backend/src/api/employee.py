@@ -1,5 +1,5 @@
-from fastapi import APIRouter
-from sqlalchemy import insert, select
+from fastapi import APIRouter, HTTPException
+from sqlalchemy import insert, select, delete
 
 from src.database import async_session_maker
 from src.schemas.employee import EmployeeAdd, Employee
@@ -16,7 +16,7 @@ async def read_employee():
 
         return [Employee.model_validate(item, from_attributes= True) for item in result.scalars().all()]
 
-@router.post("/")
+@router.post("")
 async def create_employee(employee_data: EmployeeAdd):
     async with async_session_maker() as session:
         add_employee_stmt = insert(EmployeeOrm).values(**employee_data.model_dump())
